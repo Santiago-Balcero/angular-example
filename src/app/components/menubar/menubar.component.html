@@ -1,0 +1,19 @@
+<p-menubar [ngClass]="{'logged-in': logged, 'menu': !logged}">
+  <ng-template pTemplate="start" class="menuStart">
+    <ng-container *ngFor="let item of items">
+        <div class="menu-item" [routerLink]="item.routerLink">
+            <span class="material-icons-round menu-icon">{{item.icon}}</span>
+            <p class="menu-label">{{item.label}}</p>
+        </div>
+    </ng-container>
+    <div *ngIf="logged" class="menu-item" (click)="onClick()">
+        <span class="material-icons-round menu-icon">{{ logoutIcon }}</span>
+        <p class="menu-label">{{ logoutLabel }}</p>
+    </div>
+  </ng-template>
+  <div *ngIf="!logged">
+    <button pButton [label]="buttonLabel" class="p-button-rounded menu-button" (click)="onClick()">
+        <span class="material-icons-round button log-button">{{ buttonIcon }}</span>
+    </button>
+</div>
+</p-menubar>

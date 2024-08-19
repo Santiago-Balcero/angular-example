@@ -1,0 +1,392 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    padding: 12px;
+    height: auto;
+    border-radius: 25px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.container-sub {
+    /* border: 1px solid white; */
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+  
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid #ffffff99; */
+    border-radius: 25px;
+    padding: 20px;
+    left: 50%;
+    width: 96%;
+    box-sizing: border-box;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+.col.bottom-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    background: #1e1e1e;
+    /* border: 1px solid #383838; */
+    border-radius: 25px;
+    margin-top: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+}
+  
+.title {
+    color: #FFD54F;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.title.white {
+    color: #ffffffe0;
+}
+
+.title.mb-16px {
+    margin-bottom: 16px;
+}
+  
+.input-text {
+    margin-bottom: 12px;
+    border-radius: 25px;
+}
+  
+.p-button-rounded {
+    margin-top: 4px;
+    font-family: "Roboto", sans-serif;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    margin-top: 12px;
+}
+
+.p-button-rounded.in-modal {
+    width: 100px;
+}
+
+button.menu-button {
+    padding: 0.5rem 0.7rem;
+    border: none;
+    margin-top: 0px;
+}
+
+button.main-button {
+    width: 170px;
+}
+
+.p-button:enabled:active {
+    padding: 0.5rem 0.7rem;
+    border: none;
+}
+
+.p-button:enabled:hover {
+    padding: 0.5rem 0.7rem;
+    border: none;
+}
+
+.input-text, p-dropdown {
+    margin-bottom: 12px;
+    border-radius: 25px;
+    width: 250px;
+}
+
+.p-menubar-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: inherit;
+}
+
+.p-menubar.p-component {
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    justify-content: space-evenly;
+    font-size: small;
+    width: inherit;
+}
+
+.logged-in {
+    width: 100%;
+}
+
+.p-menubar-end.ng-star-inserted {
+    margin-left: 0px;
+}
+
+.menu-item.ng-star-inserted {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    color: #ffffffe0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 60px;
+    text-align: center;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    color: #ffffffe0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 60px;
+    text-align: center;
+}
+
+.menu-item.wd-80px {
+    width: 80px;
+    margin-top: 4px;
+}
+
+.menu-label {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 60px;
+}
+
+.p-dropdown {
+    border-radius: 25px;
+}
+  
+.input-dropdown .p-dropdown-label {
+    width: 210px;
+}
+
+.alert {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color:#ee2828;
+}
+  
+.info-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #ffffffe0;
+    width: 250px;
+    margin-top: 0px;
+}
+
+.help-text {
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    color: #ffffffe0;
+    margin-top: 0px;
+    margin-bottom: 12px;
+    width: 250px;
+}
+
+.icon-text {
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    color: #ffffffe0;
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.stars-container {
+    margin-bottom: 12px;
+}
+
+.material-icons-round.active {
+    color: #ffffffe0;
+}
+
+.material-icons-round.disabled {
+    color: #ffffff70;
+}
+
+.material-icons-round.button {
+    color: #212529;
+}
+
+.material-icons-round.log-button {
+    font-size: 1.2rem;
+    margin-right: 3px;
+}
+
+.material-icons-round.menu-icon {
+    color: #ffffffe0;
+}
+
+.material-icons-round.loader {
+    color: #ffffff70;
+    scale: 2;
+    animation: size 1s 1, colors 1.5s infinite;
+}
+
+.material-icons-round.modal-icon {
+    color: #FFD54F;
+    scale: 2;
+}
+
+@keyframes size {
+    from {scale: 1;}
+    to {scale: 2;}
+}
+
+@keyframes colors {
+    from {color: #ffffff70;}
+    to {color: #FFD54F;}
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #121212;
+}
+
+.cont-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: #121212dc;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 80px);
+    padding: 24px;
+    max-width: 310px;
+    height: auto;
+    max-height: 94vh;
+    margin: 0;
+    border-radius: 25px;
+    background-color: #1e1e1e;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    transition-duration: 0.3s;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+}
+    
+.modal-icon {
+    display: inline-block;
+    margin: 0px auto;
+    margin-bottom: 8px;
+}
+
+.modal-body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-title {
+    font-family: "Roboto", sans-serif;
+}
+
+.modal-info {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    text-align: center;
+    font-style: normal;
+}
+
+.modal-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

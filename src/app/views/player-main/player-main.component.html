@@ -1,0 +1,29 @@
+<div class="container" *ngIf="player">
+    <div class="row">
+        <h3 class="title">{{ player.firstName + ' ' + player.lastName}}</h3>
+        <app-star-rating></app-star-rating>
+        <ng-container class="playerInfo">
+            <p class="info-text"><strong>Category: </strong>{{ player.category }}</p>
+            <p class="info-text"><strong>Position: </strong>{{ player.position }}</p>
+            <p class="info-text"><strong>Total effectiveness: </strong>{{ player.totalEffectiveness | percent }}</p>
+            <p class="info-text"><strong>Total games: </strong>{{ player.totalGames }}</p>
+            <p class="info-text"><strong>Total actions: </strong>{{ player.totalActions }}</p>
+            <p class="info-text"><strong>Total points: </strong>{{ player.totalPoints }}</p>
+            <p class="info-text"><strong>Total perfects: </strong>{{ player.totalPerfects }}</p>
+            <p class="info-text"><strong>Total neutrals: </strong>{{ player.totalNeutrals }}</p>
+            <p class="info-text"><strong>Total errors: </strong>{{ player.totalErrors }}</p>
+        </ng-container>
+        <div class="menu-item wd-80px" (click)="editPlayer()">
+            <span class="material-icons-round menu-icon">{{ editAccountIcon }}</span>
+            <p class="icon-text">{{ editAccountLabel }}</p>
+        </div>
+        <button *ngIf="player.teams.length > 0" pButton class="p-button-rounded main-button"
+            [label]="newGameButtonLabel">
+            <span class="material-icons-round button log-button">{{ newGameButtonIcon }}</span>
+        </button>
+        <button pButton  class="p-button-rounded main-button" [label]="newTeamButtonLabel">
+            <span class="material-icons-round button log-button">{{ newTeamButtonIcon }}</span>
+        </button>
+    </div>
+</div>
+<app-loader [show]="loading"></app-loader>

@@ -1,0 +1,22 @@
+export const iconConstants = {
+    DONE: 'done',
+    SUCCESS: 'mood',
+    ERROR: 'sentiment_very_dissatisfied',
+    LOG_IN: 'login',
+    LOG_OUT: 'logout',
+    QUESTION: 'help_outline',
+    CANCEL: 'close',
+    WARNING: 'warning_amber',
+    SAD: 'sentiment_dissatisfied',
+    KEY: 'key',
+    EDIT: 'edit',
+    DELETE: 'delete',
+    SAVE: 'save_alt',
+    EDIT_ACCOUNT: 'manage_accounts',
+    START_GAME: 'play_arrow',
+    CREATE_TEAM: 'group_add',
+    CREATE_PLAYER: 'person_add',
+    STAR_EMPTY: 'star_outline',
+    STAR_HALF: 'star_half',
+    STAR_FULL: 'star'
+}

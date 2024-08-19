@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <h3 class="title mb-16px">Welcome to Volley App</h3>
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <div class="form-group">
+            <input type="email" class="input-text" id="username" name="username" formControlName="username" 
+                    placeholder="Your email" pInputText />
+            <input type="password" class="input-text" id="password" name="password" formControlName="password" 
+                    placeholder="Your password" pInputText />
+            <button pButton type="submit" class="p-button-rounded" [label]="buttonLabel" [disabled]="loginForm.invalid">
+                <span *ngIf="buttonLabel === 'Log in'" class="material-icons-round button log-button">{{ buttonIcon }}</span>
+            </button>
+        </div>
+    </form>
+  </div>
+</div>

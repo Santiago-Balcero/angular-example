@@ -1,0 +1,91 @@
+<div class="stars-container" [ngSwitch]="stars">
+
+    <div clss="stars-row" *ngSwitchCase="0.0">
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="0.5">
+        <span class="material-icons-round active">{{ starHalf }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="1.0">
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="1.5">
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starHalf }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="2.0">
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="2.5">
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starHalf }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="3.0">
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="3.5">
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starHalf }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="4.0">
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round disabled">{{ starEmpty }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="4.5">
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starHalf }}</span>
+    </div>
+
+    <div clss="stars-row" *ngSwitchCase="5.0">
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+        <span class="material-icons-round active">{{ starFull }}</span>
+    </div>
+
+</div>

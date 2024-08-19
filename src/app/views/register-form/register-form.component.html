@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <h3 class="title mb-16px">Register to enjoy Volley App</h3>
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+        <div class="form-group">
+            <input type="email" class="input-text" id="email" name="email" formControlName="email" 
+                    placeholder="Team's email" (onblur)="checkValid('email')" pInputText />
+            <input type="text" class="input-text" id="firstName" name="firstName" formControlName="firstName" 
+                    placeholder="Team's name" maxlength="30" pInputText />
+            <p-dropdown [options]="categories" class="input-dropdown" id="category" name="category" formControlName="category"
+                    placeholder="Team's category" optionValue="category" optionLabel="category" ></p-dropdown>
+            <p-dropdown [options]="countries" class="input-dropdown" id="country" name="country" formControlName="country"
+                    placeholder="Select a country" optionValue="english" optionLabel="english" ></p-dropdown>
+            <input type="text" class="input-text" id="city" name="city" formControlName="city" 
+                    placeholder="Team's city" maxlength="30" pInputText />
+            <input type="password" class="input-text" id="password" name="password" formControlName="password" 
+                    placeholder="Password" pInputText />
+            <p class="help-text">{{ passwordHelper }}</p>
+            <button pButton type="submit" class="p-button-rounded" [label]="buttonLabel" [disabled]="registerForm.invalid">
+                <span class="material-icons-round button log-button">{{ buttonIcon }}</span>
+            </button>
+        </div>
+    </form>
+  </div>
+</div>

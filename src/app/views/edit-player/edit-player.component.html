@@ -1,0 +1,74 @@
+<div class="container" *ngIf="player">
+    <div class="row">
+        <h3 *ngIf="!edit && !editPass" class="title mb-16px">Account details</h3>
+        <h3 *ngIf="edit && !editPass" class="title mb-16px">Edit account</h3>
+        <h3 *ngIf="edit && editPass" class="title mb-16px">Change password</h3>
+        <!-- Show info section -->
+        <ng-container *ngIf="!edit && !editPass" class="playerInfo">
+            <p class="info-text"><strong>Email: </strong>{{player.email}}</p>
+            <p class="info-text"><strong>First name: </strong>{{player.firstName}}</p>
+            <p class="info-text"><strong>Last name: </strong>{{player.lastName}}</p>
+            <p class="info-text"><strong>Category: </strong>{{player.category}}</p>
+            <p class="info-text"><strong>Position: </strong>{{player.position}}</p>
+            <p class="info-text"><strong>Active since: </strong>{{ player.playerCreationDateTime | date:'longDate' }}
+            </p>
+        </ng-container>
+        <!-- End info section -->
+        <!-- Edit main info form section -->
+        <form *ngIf="edit && !editPass" [formGroup]="editForm">
+            <div class="form-group">
+                <input type="email" class="input-text" id="email" name="email" formControlName="email" (change)="inputChange('email')" (keyup)="inputChange('email')"
+                        placeholder="Your email" (onblur)="checkValid('email')" pInputText />
+                <input type="text" class="input-text" id="firstName" name="firstName" formControlName="firstName" (change)="inputChange('firstName')" (keyup)="inputChange('firstName')"
+                        placeholder="Your first name" maxlength="30" pInputText />
+                <input type="text" class="input-text" id="lastName" name="lastName" formControlName="lastName" (change)="inputChange('lastName')" (keyup)="inputChange('lastName')"
+                        placeholder="Your last name" maxlength="30" pInputText />
+                <p-dropdown [options]="categories" class="input-dropdown" id="category" name="category" formControlName="category" (ngModelChange)="inputChange('category')"
+                        placeholder="Select your category" optionValue="cat" optionLabel="cat" ></p-dropdown>
+                <p-dropdown [options]="positions" class="input-dropdown" id="position" name="position" formControlName="position" (ngModelChange)="inputChange('position')"
+                        placeholder="Select your position" optionValue="val" optionLabel="pos" ></p-dropdown>
+            </div>
+        </form>
+        <div *ngIf="edit && !editPass" class="menu-item wd-80px" (click)="editPassword()">
+            <span class="material-icons-round menu-icon">{{ changePasswordIcon }}</span>
+            <p class="icon-text">{{ changePasswordLabel }}</p>
+        </div>
+        <!-- End edit main info form section -->
+        <!-- Password form section -->
+        <form *ngIf="edit && editPass" [formGroup]="passwordForm">
+            <div class="form-group">
+                <input type="password" class="input-text" id="oldPassword" name="oldPassword" formControlName="oldPassword"
+                        placeholder="Current password" pInputText />
+                <input type="password" class="input-text" id="newPassword" name="newPassword" formControlName="newPassword"
+                        placeholder="New password" pInputText />
+                <p class="help-text">{{ passwordHelper }}</p>
+            </div>
+        </form>
+        <!-- End password form section -->
+        <!-- Buttons section -->
+        <button *ngIf="!edit && !editPass" pButton class="p-button-rounded main-button" [label]="editAccountBtnLabel" (click)="editAccount()">
+            <span class="material-icons-round button log-button">{{ editAccountBtnIcon }}</span>
+        </button>
+        <button *ngIf="!edit && !editPass" pButton class="p-button-rounded main-button" [label]="deleteAccountBtnLabel" (click)="deleteAccount()">
+            <span class="material-icons-round button log-button">{{ deleteAccountBtnIcon }}</span>
+        </button>
+        <button *ngIf="edit && !editPass" pButton type="submit" class="p-button-rounded main-button" [label]="saveAccountChangesBtnLabel" (click)="saveChanges()"
+        [disabled]="!inputHasChanged">
+            <span class="material-icons-round button log-button">{{ saveBtnIcon }}</span>
+        </button>
+        <button *ngIf="edit && !editPass" pButton class="p-button-rounded main-button" [label]="cancelAccountChangesBtnLabel" (click)="cancelChanges()">
+            <span class="material-icons-round button log-button">{{ cancelBtnIcon }}</span>
+        </button>
+        <!-- Buttons for password change -->
+        <button *ngIf="edit && editPass" pButton type="submit" class="p-button-rounded main-button" [label]="saveAccountChangesBtnLabel" (click)="savePasswordChanges()"
+        [disabled]="!passwordForm.valid">
+            <span class="material-icons-round button log-button">{{ saveBtnIcon }}</span>
+        </button>
+        <button *ngIf="edit && editPass" pButton class="p-button-rounded main-button" [label]="cancelAccountChangesBtnLabel" (click)="cancelPasswordChanges()">
+            <span class="material-icons-round button log-button">{{ cancelBtnIcon }}</span>
+        </button>
+        <!-- End buttons for password change -->
+        <!-- End buttons section -->
+    </div>
+</div>
+<app-loader [show]="loading"></app-loader>
